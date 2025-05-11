@@ -32,7 +32,7 @@ if (userTasks.length === maxTasksFirst) {
       const add = confirm("Would you like to add another task?");
       if (!add) break;
 
-        const title = prompt("Enter task title:");
+      const title = prompt("Enter task title:");
       const description = prompt("Enter task description:");
       let status = prompt(
         "Enter task status (todo, doing, done):"
@@ -42,3 +42,19 @@ if (userTasks.length === maxTasksFirst) {
         alert("Invalid status. Please enter 'todo', 'doing', or 'done'.");
         status = prompt("Enter task status (todo, doing, done):").toLowerCase();
       }
+
+      userTasks.push({
+        id: userTasks.length + 1,
+        title,
+        description,
+        status,
+      });
+    }
+  }
+}
+
+if (userTasks.length === maxTasksTotal) {
+  alert(
+    "There are enough tasks on your board, please check them in the console."
+  );
+}
