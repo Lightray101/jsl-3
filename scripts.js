@@ -58,3 +58,14 @@ if (userTasks.length === maxTasksTotal) {
     "There are enough tasks on your board, please check them in the console."
   );
 }
+
+// Function to filter completed tasks
+function getCompletedTasks(arr) {
+  return arr.filter((task) => task.status === "done");
+}
+
+// Log all user-created tasks as an array
+console.log("All tasks:", userTasks);
+
+// Log only completed tasks as an array
+console.log("Completed tasks:", getCompletedTasks(userTasks));
