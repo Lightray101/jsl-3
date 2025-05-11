@@ -31,3 +31,14 @@ if (userTasks.length === maxTasksFirst) {
     while (userTasks.length < maxTasksTotal) {
       const add = confirm("Would you like to add another task?");
       if (!add) break;
+
+        const title = prompt("Enter task title:");
+      const description = prompt("Enter task description:");
+      let status = prompt(
+        "Enter task status (todo, doing, done):"
+      ).toLowerCase();
+
+      while (status !== "todo" && status !== "doing" && status !== "done") {
+        alert("Invalid status. Please enter 'todo', 'doing', or 'done'.");
+        status = prompt("Enter task status (todo, doing, done):").toLowerCase();
+      }
