@@ -23,3 +23,11 @@ while (userTasks.length < maxTasksFirst) {
     status,
   });
 }
+
+// After 3 tasks, ask if the user wants to add 3 more
+if (userTasks.length === maxTasksFirst) {
+  const addMore = confirm("Would you like to add 3 more tasks?");
+  if (addMore) {
+    while (userTasks.length < maxTasksTotal) {
+      const add = confirm("Would you like to add another task?");
+      if (!add) break;
